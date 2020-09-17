@@ -114,3 +114,42 @@ ou
     # Copy over the prod GoogleService-Info.plist for Release builds
     cp "${GOOGLESERVICE_INFO_FILE}" "${PLIST_DESTINATION}"
     ```
+
+- Adicionar icones com flavor
+    - adicionar as imagens dos icones
+        - assets/launcher_icon/demo-icon-dev.png
+        - assets/launcher_icon/demo-icon.png
+    - adicionar o plugin [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons)
+    
+    - Adicionar no pubspec.yaml
+
+    ```
+    dev_dependencies:
+        flutter_test:
+            sdk: flutter
+
+        flutter_launcher_icons: ^0.8.0
+
+    flutter_icons:
+        android: "launcher_icon"
+        ios: true
+        image_path: "assets/launcher_icon/demo-icon-dev.png"
+
+    ```
+
+    - Adicionar os arquivos de configuração por Flavor
+
+        - flutter_launcher_icons-dev.yaml
+        ```
+        flutter_icons:
+            android: true
+            ios: true
+            image_path: "assets/launcher_icon/demo-icon-dev.png"
+        ```
+        - flutter_launcher_icons-prod.yaml
+        ```
+        flutter_icons:
+            android: true
+            ios: true
+            image_path: "assets/launcher_icon/demo-icon.png"
+        ```

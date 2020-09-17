@@ -60,13 +60,13 @@ android {
     productFlavors {
         dev {
             dimension "app"
-            resValue "string", "app_name", "Dev FlavorTest"
-            applicationId "br.com.thyagoluciano.app.dev"
+            resValue "string", "app_name", "Development FlavorTest"
+            applicationId "br.com.thyagoluciano.development"
         }
 
         prod {
             dimension "app"
-            resValue "string", "app_name", "Dev FlavorTest"
+            resValue "string", "app_name", "Prod FlavorTest"
             applicationId "br.com.thyagoluciano.app"
         }
     }
